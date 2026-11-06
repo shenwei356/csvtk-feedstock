@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: csvtk
-  version: "0.38.0"
+  version: "0.39.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,12 @@ package:
 
 source:
   url: https://github.com/shenwei356/csvtk/archive/v${{ version }}.tar.gz
-  sha256: 0b2ed4c03b6082179b6c0d117a6d8e74d9bf53f334bb15d952fa059f58206d06
+  sha256: 4c6cdae73e9ef357f2b511a9ff0c055d7abe6140afaf67e668008558425b1723
+  patches:
+    - fix-x-sys-ppc64le-pie.patch
 
 build:
-  number: 2
+  number: 0
 
 requirements:
   build:
